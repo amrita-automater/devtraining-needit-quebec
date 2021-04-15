@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_amrita_kaur" type="collection">
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request Type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive="true" inactive_on_update="true" label="Joining Form" sequence="0" value="joining_form"/>
+                <element inactive_on_update="false" label="Legal" sequence="1" value="legal"/>
+                <element inactive="true" inactive_on_update="true" label="Release letter" sequence="1" value="release_letter"/>
+                <element inactive_on_update="false" label="Information Technology" sequence="2" value="itech"/>
+                <element inactive="true" inactive_on_update="true" label="Legal form" sequence="2" value="legal_form"/>
+                <element inactive="true" inactive_on_update="true" label="Contract" sequence="3" value="contract"/>
+                <element inactive_on_update="false" label="Facilities" sequence="3" value="facilities"/>
+                <element inactive="true" inactive_on_update="true" label="Facilities1" sequence="4" value="facilitie_1"/>
+                <element inactive="true" inactive_on_update="true" label="Mouse" sequence="5" value="mouse"/>
+                <element inactive="true" inactive_on_update="true" label="keyboard" sequence="6" value="keyboard"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="keyboard" label="What needed" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Keyboard" sequence="0" value="keyboard"/>
+                <element inactive="true" inactive_on_update="true" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Mouse" sequence="1" value="mouse"/>
+                <element inactive="true" inactive_on_update="true" label="Choice 3" sequence="2" value="Choice 3"/>
+                <element inactive_on_update="false" label="Contract" sequence="2" value="contract"/>
+                <element inactive_on_update="false" label="Legalpapers" sequence="3" value="legalpapers"/>
+                <element inactive_on_update="false" label="Leave Tracker" sequence="4" value="leave tracker"/>
+                <element inactive_on_update="false" label="Joining Form" sequence="5" value="joining form"/>
+                <element inactive_on_update="false" label="Release form" sequence="6" value="release form"/>
+                <element inactive_on_update="false" label="Supplies" sequence="7" value="supplies"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
